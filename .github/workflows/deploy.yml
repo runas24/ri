@@ -1,6 +1,5 @@
 name: Deploy to GitHub Pages
 
-# Триггер на push в ветку main
 on:
   push:
     branches:
@@ -11,35 +10,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout the repository
       - name: Checkout the code
         uses: actions/checkout@v2
 
-      # Set up Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
           node-version: '16'
 
-      # Install dependencies
       - name: Install dependencies
         run: npm install
 
-      # Build the project
       - name: Build the project
         run: npm run build
 
-      # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-<<<<<<< HEAD
+
           github_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-=======
-          github_token: ${{ secrets.github_token }}
-<<<<<<< HEAD
->>>>>>> e4da0a7 (Save current work before pull)
+     
+
           publish_dir: ./dist
-=======
-          publish_dir: ./dist
->>>>>>> 7190b95 (Initial commit)
+
