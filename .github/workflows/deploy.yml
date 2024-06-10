@@ -33,5 +33,13 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
+<<<<<<< HEAD
           github_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+=======
+          github_token: ${{ secrets.github_token }}
+<<<<<<< HEAD
+>>>>>>> e4da0a7 (Save current work before pull)
           publish_dir: ./dist
+=======
+          publish_dir: ./dist
+>>>>>>> 7190b95 (Initial commit)
